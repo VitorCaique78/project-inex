@@ -5,8 +5,14 @@ import { Button, Container, Grid, Typography } from "@mui/material";
 import { BtnApps } from "../../components/Buttons/btnApps";
 import ContactForm from "../../components/Contact";
 import FirstContentIntern from "../../components/Sections/firstContentIntern";
+import { useEffect } from "react";
+import Aos from "aos";
 
 export default function Saloes() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <SALAO>
       <Header intern />

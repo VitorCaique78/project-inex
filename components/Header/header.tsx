@@ -39,7 +39,7 @@ export const Header: React.FC<headerProps> = ({ intern }) => {
         <HEADER className={(scrolled ? 'scroll' : '') + (intern ? 'intern scroll' : '')}>
             <div className={menuMobileActive ? "filter-menu active" : "filter-menu"}></div>
             <div className={`menu-mobile d-block d-md-none ${menuMobileActive ? 'active' : ''}`}>
-                <Link href="/" className="logo">
+                <Link href="/" className="logo" aria-label="Logo">
                     <img src="/svg/yobelle-logo-alt.svg" alt="Logo" />
                 </Link>
 
@@ -52,7 +52,7 @@ export const Header: React.FC<headerProps> = ({ intern }) => {
                 </ul>
             </div>
             <Box className="header-content container">
-                <Link href="/" className="logo">
+                <Link href="/" className="logo" aria-label="Logo">
                     <img src="/svg/logo.svg" alt="" />
                 </Link>
 

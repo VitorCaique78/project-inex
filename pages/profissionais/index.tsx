@@ -4,8 +4,15 @@ import { Footer } from "../../components/Footer/footer";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import { BtnApps } from "../../components/Buttons/btnApps";
 import FirstContentIntern from "../../components/Sections/firstContentIntern";
+import { useEffect } from "react";
+import Aos from "aos";
+
 
 export default function Profissionais() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <PROFISSIONAIS>
       <Header intern />

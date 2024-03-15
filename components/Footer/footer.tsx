@@ -9,7 +9,7 @@ export const Footer = () => {
             <Container className="footer-content">
                 <Grid container spacing={3} className="d-block d-md-none">
                     <Grid item xs={12}>
-                        <Link href="/" className="logo-footer">
+                        <Link href="/" className="logo-footer" aria-label="Logo">
                             <img src="/img/yobelle-logo-alt.png" alt="" />
                         </Link>
                         <Typography variant="body1" className="mb-5 about-text">
@@ -28,13 +28,13 @@ export const Footer = () => {
                     </Grid>
                     <Grid item xs={12}>
                         <div className="redes">
-                            <Link href="https://facebook.com.br/useyobelle" className="redes-item">
+                            <Link href="https://facebook.com.br/useyobelle" className="redes-item" aria-label="Logo">
                                 <span className="icon-social icon-facebook"></span>
                             </Link>
-                            <Link href="https://instagram.com.br/useyobelle" className="redes-item">
+                            <Link href="https://instagram.com.br/useyobelle" className="redes-item" aria-label="Logo">
                                 <span className="icon-social icon-instagram"></span>
                             </Link>
-                            <Link href="malito:contato@yobelle.com.br" className="redes-item">
+                            <Link href="malito:contato@yobelle.com.br" className="redes-item" aria-label="Logo">
                                 <span className="icon-social icon-mail"></span>
                             </Link>
                         </div>
@@ -42,7 +42,7 @@ export const Footer = () => {
                 </Grid>
                 <Grid container spacing={3} className="d-none d-md-flex">
                     <Grid item xs={3}>
-                        <Link href="" className="logo-footer">
+                        <Link href="" className="logo-footer" aria-label="Logo">
                             <img src="svg/yobelle-logo-alt.svg" alt="" />
                         </Link>
                         <ul className="menu-footer">
@@ -55,13 +55,13 @@ export const Footer = () => {
                     </Grid>
                     <Grid item xs={9}>
                         <div className="redes">
-                            <Link href="http://facebook.com.br/yobelleoficial" className="redes-item">
+                            <Link href="http://facebook.com.br/yobelleoficial" className="redes-item" aria-label="Logo">
                                 <span className="icon-social icon-facebook"></span>
                             </Link>
-                            <Link href="http://instagram.com.br/useyobelle" className="redes-item">
+                            <Link href="http://instagram.com.br/useyobelle" className="redes-item" aria-label="Logo">
                                 <span className="icon-social icon-instagram"></span>
                             </Link>
-                            <Link href="malito:contato@yobelle.com.br" className="redes-item">
+                            <Link href="malito:contato@yobelle.com.br" className="redes-item" aria-label="Logo">
                                 <span className="icon-social icon-mail"></span>
                             </Link>
                         </div>
