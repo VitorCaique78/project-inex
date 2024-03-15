@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { BtnApps } from "../Buttons/btnApps";
 
 export const Beneficios = () => {
-    const [scroll, setScroll] = useState(0);
+    const [scroll, setScroll] = useState<number>(0);
 
     useEffect(() => {
         function handleScroll() {

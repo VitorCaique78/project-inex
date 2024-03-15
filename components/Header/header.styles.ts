@@ -8,7 +8,7 @@ const HEADER = styled.header`
   left: 0;
   right: 0;
   transition: 0.2s all ease-out;
-  &.scroll {
+  &.scroll, &.intern {
     padding: 15px 0;
     background: #14cfd4;
   }

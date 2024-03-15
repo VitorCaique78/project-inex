@@ -6,9 +6,7 @@ import styled from "styled-components"
 export const Testemunhas = () => {
 
   const sliderRef = useRef<Slider>(null);
-
-
-
+  const controlsSlideRef = useRef(null);
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -48,6 +46,7 @@ export const Testemunhas = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
+    appendArrows: controlsSlideRef.current,
     responsive: [
       {
         breakpoint: 762,
@@ -63,7 +62,18 @@ export const Testemunhas = () => {
     ],
   };
 
-  console.log(sliderRef.current?.props?.children);
+  const handleNextClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  // Função para retroceder o slider
+  const handlePrevClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
 
   return (
     <TESTEMUNHAS className="testmonials aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
@@ -75,9 +85,9 @@ export const Testemunhas = () => {
           <h2 className="section-testmonials--desc aos-init aos-animate">
             Veja a opinião de <br /> quem é assinante
           </h2>
-          <div className="controls-slide controls-slide--testmonials">
-            <button className="btn-controls btn-controls--prev" id="slidePrev2">Prev</button>
-            <button className="btn-controls btn-controls--next" id="slideNext2">Next</button>
+          <div className="controls-slide controls-slide--testmonials" ref={controlsSlideRef}>
+            <button className="btn-controls btn-controls--prev" id="slidePrev2" onClick={handlePrevClick}>Prev</button>
+            <button className="btn-controls btn-controls--next" id="slideNext2" onClick={handleNextClick}>Next</button>
           </div>
         </div>
 

@@ -13,7 +13,7 @@ export const Instituto = () => {
               </div>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Typography variant="h3" className="title-section aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+              <Typography variant="h3" className="title-section aos-init aos-animate text-center text-sm-start" data-aos="fade-up" data-aos-duration="1000">
                 Segurança e qualidade verificada pelo Instituto Embelleze
               </Typography>
               <Typography variant="body1" className="subtitle-section mb-5 mb-md-0 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">

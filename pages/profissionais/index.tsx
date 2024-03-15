@@ -3,73 +3,13 @@ import { Header } from "../../components/Header/header";
 import { Footer } from "../../components/Footer/footer";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import { BtnApps } from "../../components/Buttons/btnApps";
+import FirstContentIntern from "../../components/Sections/firstContentIntern";
 
-export default function QuemSomos() {
+export default function Profissionais() {
   return (
     <PROFISSIONAIS>
       <Header intern />
-      <section className="section-hero intern">
-        <Container>
-          <div className="section-content container">
-            <Grid container spacing={4} alignItems="center">
-              <Grid item xs={12} md={6} className="mb-5 mb-md-0 mt-4 mt-md-0 mr-2 mr-md-0">
-                <Typography variant="h1" gutterBottom className="professional--title">
-                  Construa sua carreira profissional conosco e se torne independente
-                </Typography>
-                <Typography variant="body1" gutterBottom className="professional--desc">
-                  Seja seu próprio chefe e tenha uma renda extra até R$4.000,00 por mês
-                </Typography>
-                <div className="buttons-app professional">
-                  <BtnApps black={true} />
-                </div>
-              </Grid>
-              <Grid item xs={12} md={6} className="text-center text-md-right">
-                <div
-                  className="people-one aos-init aos-animate"
-                  id="scene"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  style={{
-                    transform: 'translate3d(0px, 0px, 0px) rotate(0.0001deg)',
-                    transformStyle: 'preserve-3d',
-                    backfaceVisibility: 'hidden',
-                    position: 'relative',
-                    pointerEvents: 'none'
-                  }}
-                >
-                  <img
-                    src="/img/yobelle-mulher.png"
-                    alt="Mulher acessando celular"
-                    data-depth="0.2"
-                    style={{
-                      transform: 'translate3d(-10.8px, 9px, 0px)',
-                      transformStyle: 'preserve-3d',
-                      backfaceVisibility: 'hidden',
-                      position: 'relative',
-                      display: 'block',
-                      left: '0px',
-                      top: '0px'
-                    }}
-                  />
-                  <span
-                    className="icons-yobelle"
-                    data-depth="0.3"
-                    style={{
-                      transform: 'translate3d(-16.1px, 13.5px, 0px)',
-                      transformStyle: 'preserve-3d',
-                      backfaceVisibility: 'hidden',
-                      position: 'absolute',
-                      display: 'block',
-                      left: '0px',
-                      top: '0px'
-                    }}
-                  ></span>
-                </div>
-              </Grid>
-            </Grid>
-          </div>
-        </Container>
-      </section>
+      <FirstContentIntern title="Construa sua carreira profissional conosco e se torne independente" subtitle="Seja seu próprio chefe e tenha uma renda extra até R$4.000,00 por mês" image="/img/yobelle-mulher.png"/>
       <section className="be-profissional pb-5" id="como-funciona">
         <Container>
           <Typography variant="h3" className="title-section mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
@@ -146,17 +86,5 @@ export default function QuemSomos() {
   )
 }
 
-const PROFISSIONAIS = styled.section`
-    background-color: white;
-    .centered-text {
-      width: 30%;
-      margin: 0 auto;
-      padding: 40px 40px;
-      color: black;      
-      text-align: left;
-      font-size: 16px;
-      h2,h3 {
-        margin: 20px 0px;
-      }
-    }
+const PROFISSIONAIS = styled.section`    
 `

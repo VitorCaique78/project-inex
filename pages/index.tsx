@@ -1,15 +1,17 @@
-import styled from "styled-components";
-import React, { useEffect} from 'react'
-import { Footer } from '../components/Footer/footer'
+import React, { useEffect, Suspense } from 'react';
+import styled from 'styled-components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Cabecalho } from '../components/Home/cabecalho';
-import { ComoFunciona } from "../components/Home/como_funciona";
-import { Servicos } from "../components/Home/servicos";
-import { Beneficios } from "../components/Home/beneficios";
-import { Instituto } from "../components/Home/instituto";
-import { Profissional } from "../components/Home/profissional";
-import { Testemunhas } from "../components/Home/testemunhas";
+
+// Importando os componentes usando lazy loading
+const ComoFunciona = React.lazy(() => import('../components/Home/como_funciona').then(module => ({ default: module.ComoFunciona })));
+const Servicos = React.lazy(() => import('../components/Home/servicos').then(module => ({ default: module.Servicos })));
+const Beneficios = React.lazy(() => import('../components/Home/beneficios').then(module => ({ default: module.Beneficios })));
+const Instituto = React.lazy(() => import('../components/Home/instituto').then(module => ({ default: module.Instituto })));
+const Profissional = React.lazy(() => import('../components/Home/profissional').then(module => ({ default: module.Profissional })));
+const Testemunhas = React.lazy(() => import('../components/Home/testemunhas').then(module => ({ default: module.Testemunhas })));
+const Footer = React.lazy(() => import('../components/Footer/footer').then(module => ({ default: module.Footer })));
 
 export default function Home() {
   useEffect(() => {
@@ -17,19 +19,17 @@ export default function Home() {
   }, []);
 
   return (
-    <HOME data-scrollbar>
-      <Cabecalho/>
-      <ComoFunciona/>
-      <Servicos/>
-      <Beneficios/>
-      <Instituto/>
-      <Profissional/>
-      <Testemunhas/>
-      <Footer />
+    <HOME data-scrollbar>      
+        <Cabecalho />
+        <ComoFunciona />
+        <Servicos />
+        <Beneficios />
+        <Instituto />
+        <Profissional />
+        <Testemunhas />
+        <Footer />
     </HOME>
-  )
+  );
 }
 
-const HOME = styled.div`
-    
-`
+const HOME = styled.div``;

@@ -3,9 +3,12 @@ import { HEADER } from "./header.styles";
 import { Box, Button } from "@mui/material";
 import { useEffect, useState } from "react";
 
+interface headerProps {
+    intern?: boolean
+}
 
-export const Header = (intern?: any) => {
-    const [scrolled, setScrolled] = useState(false);
+export const Header: React.FC<headerProps> = ({ intern }) => {
+    const [scrolled, setScrolled] = useState<boolean>(false);
 
     const [menuMobileActive, setMenuMobileActive] = useState<boolean>(false);
 
@@ -29,8 +32,11 @@ export const Header = (intern?: any) => {
         };
     }, []);
 
+    console.log(scrolled);
+    console.log(intern);    
+
     return (
-        <HEADER className={scrolled || intern ? 'scroll' : ''}>
+        <HEADER className={(scrolled ? 'scroll' : '') + (intern ? 'intern scroll' : '')}>
             <div className={menuMobileActive ? "filter-menu active" : "filter-menu"}></div>
             <div className={`menu-mobile d-block d-md-none ${menuMobileActive ? 'active' : ''}`}>
                 <Link href="/" className="logo">
@@ -40,9 +46,9 @@ export const Header = (intern?: any) => {
                 <ul className="menu-responsive">
                     <li><Link href="/#como-funciona" onClick={() => {setMenuMobileActive(false)}}>Como Funciona</Link></li>
                     <li><Link href="/#servicos" onClick={() => {setMenuMobileActive(false)}}>Serviços</Link></li>
-                    <li><Link href="/profissionais.html">Profissionais</Link></li>
-                    <li><Link href="/salao.html">Salões</Link></li>
-                    <li><Link href="/empresas.html">Empresas</Link></li>
+                    <li><Link href="/profissionais">Profissionais</Link></li>
+                    <li><Link href="/salao">Salões</Link></li>
+                    <li><Link href="/empresas">Empresas</Link></li>
                 </ul>
             </div>
             <Box className="header-content container">
